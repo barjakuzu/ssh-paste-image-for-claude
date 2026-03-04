@@ -28,11 +28,10 @@ Claude Code can then read the image file and use it as context.
 
 ## Installation
 
-### From Marketplace
+### Download .vsix (recommended)
 
-Search for **"SSH Paste Image for Claude"** in the Extensions panel.
-
-### From .vsix
+1. Download the latest `.vsix` from [**Releases**](https://github.com/barjakuzu/ssh-paste-image-for-claude/releases/latest)
+2. Install:
 
 ```sh
 # VS Code
@@ -42,6 +41,8 @@ code --install-extension ssh-paste-image-for-claude-0.1.0.vsix
 antigravity --install-extension ssh-paste-image-for-claude-0.1.0.vsix
 ```
 
+Or install from within the editor: Extensions panel → `...` menu → **Install from VSIX...**
+
 ### From source
 
 ```sh
@@ -50,6 +51,7 @@ cd ssh-paste-image-for-claude
 npm install
 npm run compile
 npm run package
+code --install-extension ssh-paste-image-for-claude-0.1.0.vsix
 ```
 
 ## Keybinding
