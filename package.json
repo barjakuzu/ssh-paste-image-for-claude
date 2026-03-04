@@ -1,0 +1,62 @@
+{
+  "name": "ssh-paste-image-for-claude",
+  "displayName": "SSH Paste Image for Claude",
+  "description": "Paste clipboard images into Claude Code running over SSH. Uploads images from your local clipboard to the remote server via scp and inserts the path into the terminal. Works with VS Code and Antigravity.",
+  "version": "0.1.0",
+  "publisher": "temobarjadze",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/barjakuzu/ssh-paste-image-for-claude"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "ssh",
+    "image",
+    "paste",
+    "clipboard",
+    "remote",
+    "scp",
+    "terminal",
+    "antigravity"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ssh-paste-image.paste",
+        "title": "Paste Image to SSH Terminal"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ssh-paste-image.paste",
+        "key": "cmd+shift+v",
+        "when": "terminalFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^2.22.0",
+    "typescript": "^5.3.0"
+  }
+}
